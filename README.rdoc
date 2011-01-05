@@ -1,6 +1,6 @@
 == Rails 3 / Enum Support
 
-Provides rudimentary enum support in Rails 3 model classes.
+Provides rudimentary enum support for Rails 3 model classes.
 
 == Getting Started
 1. Require the enum_support gem in each model class you wish to use it in:
