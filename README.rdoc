@@ -1,0 +1,19 @@
+== Rails 3 / Enum Support
+
+Provides rudimentary enum support in Rails 3 model classes.
+
+== Getting Started
+1. Require the enum_support gem in each model class you wish to use it in:
+    require 'enum_support'
+2. Then, make sure to extend the mixin:
+    Class IceCream < ActiveRecord::Base
+      extend EnumSupport
+3. Finally, specify as many enum attributes as you want within the class:
+    enum :flavour, %w{vanilla chocolate strawberry neopolitan}
+
+At this point, you can use your enumeration just as you would with any other attribute you specify:
+    yum = IceCream.new
+    yum.flavour = :chocolate
+    yum.flavour # returns :chocolate
+
+Validation is also performed when attempting to save a model instance. Setting an enum attribute to a value not in the initial set will render the instance invalid.
