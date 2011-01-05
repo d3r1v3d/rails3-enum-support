@@ -5,7 +5,7 @@ Provides rudimentary enum support for Rails 3 model classes.
 == Getting Started
 1. Require the enum_support gem in each model class you wish to use it in:
     require 'enum_support'
-2. Then, make sure to extend the mixin:
+2. Then, make sure to extend the module:
     Class IceCream < ActiveRecord::Base
       extend EnumSupport
 3. Finally, specify as many enum attributes as you want within the class:
